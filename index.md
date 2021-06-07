@@ -5,12 +5,6 @@
 [Amazon](https://www.amazon.co.jp/exec/obidos/ASIN/4297112256/?ie=UTF8&linkCode=shr&tag=utopia33-22)  
 2020.4.18
 
-## 正誤表
-
-| ページ | 内容 |
-| ---- | ---- |
-|10.2(p.258)| 本文中の ipconfig は ifconfig の誤りです。|
-
 ## macOS Big Sur（11.4）およびApple M1チップ搭載Macについて
 
 本書の動作確認はmacOS Catalina（10.15）で行っています。
@@ -54,22 +48,28 @@ M1 Mac環境でインストールした場合、PATHの追加が必要です。
 
 参考：PATHについて👉p.172、p.3463.3章(p.45)、シェルの設定ファイル👉p.172、p.346zsh：7.2章、bash7.3章
 
-```
-==> Installation successful!
-＜略＞
-==> Next steps:
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+==> <strong>Installation successful!</strong>
+<span style="color:gray">＜略＞</span>
+==> <strong>Next steps:</strong>
 - Add Homebrew to your PATH in /Users/ユーザ名/.zprofile:
     echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/ユーザ名/.zprofile
     eval "$(/opt/homebrew/bin/brew shellenv)"
 - Run `brew help` to get started
 - Further documentation: 
     https://docs.brew.sh
-```
+</code></pre></div></div>
 
 | ページ | 内容 |
 | ---- | ---- |
 |11.1(p.279)|**[M1 Mac]** パッケージは `/usr/local`下にインストールされます。👉 パッケージは`/opt/homebrew`下にインストールされます。<br />（以下適宜読み替えてください。`/usr/local/Cellar`👉`/opt/homebrew/Cellar`等）|
 |11.3(p.288)|**[3.0以降]** `brew cask install パッケージ名` 👉 `brew install パッケージ名 --cask`（`--cask`は省略可能、以下同様）|
+
+## 正誤表
+
+| ページ | 内容 |
+| ---- | ---- |
+|10.2(p.258)| 本文中の ipconfig は ifconfig の誤りです。|
 
 ## 履歴
 
@@ -77,5 +77,6 @@ M1 Mac環境でインストールした場合、PATHの追加が必要です。
 - 2021.6.7 正誤表 (p.258）追加
 - 2021.6.7 「macOS Big Sur（11.4）およびApple M1チップ搭載Macについて」「Big SurおよびM1 Macに関する補足情報」追加
 - 2021.6.7 「Homebrew 3.0 について」追加
+
 ----
 [［新版 zsh&bash対応］macOS×コマンド入門 ──ターミナルとコマンドライン、基本の力](https://nisim-m.github.io/macoscmdbook2/)
