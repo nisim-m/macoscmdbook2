@@ -50,7 +50,7 @@ M1 Mac環境でインストールした場合、PATHの追加が必要です。
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 ==> <strong>Installation successful!</strong>
-<span style="color:gray">＜略＞</span>
+<span style="color:gray;">＜略＞</span>
 ==> <strong>Next steps:</strong>
 - Add Homebrew to your PATH in /Users/ユーザ名/.zprofile:
     echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/ユーザ名/.zprofile
