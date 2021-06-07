@@ -34,11 +34,19 @@ macOS Mojave（10.14）以前のバージョンにも収録されていますが
 本書は執筆時点の最新バージョンであるHomebrew 2.2に基づいて制作しておりますが、
 2021年2月にリリースされた Homebrew 3.0 では以下の点が変更されています。
 
-- `brew cask` が廃止されました。
+- `brew cask` が廃止されました（`--cask`使用）。
 - M1 Macに対応しました。M1 Mac環境でインストールした場合、インストール先のディレクトリは`/opt/homebrew/`となります。
+
 参考：[Homebrew 3.0.0](https://brew.sh/2021/02/05/homebrew-3.0.0/)
 
+| ページ | 内容 |
+| ---- | ---- |
+|11.1(p.279)|**[M1 Mac]** パッケージは `/usr/local`下にインストールされます。👉 パッケージは`/opt/homebrew`下にインストールされます。<br />（以下適宜読み替えてください。`/usr/local/Cellar`👉`/opt/homebrew/Cellar`等）|
+|11.3(p.288)|**[3.0以降]** `brew cask install パッケージ名` 👉 `brew install パッケージ名 --cask`（`--cask`は省略可能、以下同様）|
+
+
 M1 Mac環境でインストールした場合、PATHの追加が必要です。
+
 インストール時のメッセージに追加用のコマンドが表示されているので、`echo`の行を実行してください。
 すぐにbrewコマンドを使用したい場合は、その次の`eval`の行を実行してください。<br>
 参考：`eval`は、引数を連結してシェルで実行するというコマンドです（クイックリファレンス p.297）。
@@ -46,7 +54,7 @@ M1 Mac環境でインストールした場合、PATHの追加が必要です。
 ユーザ名や設定ファイル名は実行時の環境に合わせて表示されるので、
 ターミナル（Terminal.app)で実行している場合はマウスで範囲選択→コピー＆ペーストして実行するのが確実です。
 
-参考：PATHについて👉p.172、p.3463.3章(p.45)、シェルの設定ファイル👉p.172、p.346zsh：7.2章、bash7.3章
+参考：PATHについて👉3.3章(p.45)、シェルの設定ファイル👉zsh：7.2章(p.169)、bash7.3章(p.178)
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 ==> <strong>Installation successful!</strong>
@@ -59,11 +67,6 @@ M1 Mac環境でインストールした場合、PATHの追加が必要です。
 - Further documentation: 
     https://docs.brew.sh
 </code></pre></div></div>
-
-| ページ | 内容 |
-| ---- | ---- |
-|11.1(p.279)|**[M1 Mac]** パッケージは `/usr/local`下にインストールされます。👉 パッケージは`/opt/homebrew`下にインストールされます。<br />（以下適宜読み替えてください。`/usr/local/Cellar`👉`/opt/homebrew/Cellar`等）|
-|11.3(p.288)|**[3.0以降]** `brew cask install パッケージ名` 👉 `brew install パッケージ名 --cask`（`--cask`は省略可能、以下同様）|
 
 ## 正誤表
 
