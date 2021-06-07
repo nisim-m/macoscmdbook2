@@ -35,23 +35,45 @@ macOS Mojave（10.14）以前のバージョンにも収録されていますが
 |10.2(p.257、259)|ネットワークユーティリティ（Network Utility.app）は廃止されました[<a href="images/networkutility.png">画像</a>]。本書で解説しているifconfigコマンドやnetworksetupコマンドは共通です。|
 |10.1(p.244)|[参考情報]M1 Macの場合、`uname -a`で表示されるハードウェア情報は`arm64`、`uname -p`で表示されるCPUアーキテクチャは`arm`になります。【`uname -a`例】`Darwin mbpro 20.5.0 Darwin Kernel Version 20.5.0: Sat May  8 05:10:31 PDT 2021; root:xnu-7195.121.3~9/RELEASE_ARM64_T8101 arm64`|
 
-
-
 ## Homebrew 3.0 について
 
 本書は執筆時点の最新バージョンであるHomebrew 2.2に基づいて制作しておりますが、
 2021年2月にリリースされた Homebrew 3.0 では以下の点が変更されています。
 
 - `brew cask` が廃止されました。
-- M1 Mac環境でインストールした場合、インストール先のディレクトリは`/opt/homebrew/`となります。
+- M1 Macに対応しました。M1 Mac環境でインストールした場合、インストール先のディレクトリは`/opt/homebrew/`となります。
+参考：[Homebrew 3.0.0](https://brew.sh/2021/02/05/homebrew-3.0.0/)
 
-[Homebrew 3.0.0](https://brew.sh/2021/02/05/homebrew-3.0.0/)
+M1 Mac環境でインストールした場合、PATHの追加が必要です。
+インストール時のメッセージに追加用のコマンドが表示されているので、`echo`の行を実行してください。
+すぐにbrewコマンドを使用したい場合は、その次の`eval`の行を実行してください。
+ユーザ名等は実行時の環境に合わせて表示されるので、ターミナル（Terminal.app)で実行している場合は
+マウスで範囲選択→コピーしてペーストするのが確実です。
+`eval`は、引数を連結してシェルで実行するというコマンドです（クイックリファレンス p.297）。
+参考：PATHについて👉p.172、p.3463.3章(p.45)、シェルの設定ファイル👉p.172、p.346zsh：7.2章、bash7.3章
 
+```
+==> Installation successful!
+＜略＞
+==> Next steps:
+- Add Homebrew to your PATH in /Users/ユーザ名/.zprofile:
+    echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/ユーザ名/.zprofile
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+- Run `brew help` to get started
+- Further documentation: 
+    https://docs.brew.sh
+```
+
+| ページ | 内容 |
+| ---- | ---- |
+|11.1(p.279)|**[M1 Mac]** パッケージは `/usr/local`下にインストールされます。👉 パッケージは`/opt/homebrew`下にインストールされます。<br />（以下適宜読み替えてください。`/usr/local/Cellar`👉`/opt/homebrew/Cellar`等）|
+|11.3(p.288)|**[3.0以降]** `brew cask install パッケージ名` 👉 `brew install パッケージ名 --cask`（`--cask`は省略可能、以下同様）|
 
 ## 履歴
 
 - 2020.4 サポートページ公開
 - 2021.6.7 正誤表 (p.258）追加
 - 2021.6.7 「macOS Big Sur（11.4）およびApple M1チップ搭載Macについて」「Big SurおよびM1 Macに関する補足情報」追加
+- 2021.6.7 「Homebrew 3.0 について」追加
 ----
-[［新版 zsh&bash対応］macOS×コマンド入門 ](https://nisim-m.github.io/macoscmdbook2/)
+[［新版 zsh&bash対応］macOS×コマンド入門 ──ターミナルとコマンドライン、基本の力](https://nisim-m.github.io/macoscmdbook2/)
