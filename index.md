@@ -5,7 +5,7 @@
 [Amazon](https://www.amazon.co.jp/exec/obidos/ASIN/4297112256/?ie=UTF8&linkCode=shr&tag=utopia33-22)  
 2020.4.18
 
-## macOS Big Sur（11.4）およびApple M1チップ搭載Macについて
+## macOS Big SurおよびApple M1チップ搭載Macについて
 
 本書の動作確認はmacOS Catalina（10.15）で行っています。
 本書で取り上げているコマンドの多くは、
@@ -13,7 +13,7 @@ macOS Mojave（10.14）以前のバージョンにも収録されていますが
 実際に使用する際には各コマンドのマニュアルやヘルプもあわせて確認してください。
 マニュアルやヘルプの確認方法は、3.3 節「コマンドの基礎知識」で解説しています。
 
-次バージョンであるmacOS Big Sur（11.0）および
+次バージョンであるmacOS Big Surおよび
 2020年末に発売されたApple M1チップ搭載のMac（以下、M1 Mac）においても、
 本書で扱っているコマンドおよびコマンドラインについては共通です。
 
@@ -24,10 +24,10 @@ macOS Mojave（10.14）以前のバージョンにも収録されていますが
 
 | ページ | 内容 |
 | ---- | ---- |
-| 4.2(p.65) | パーティションの作成方法が変更されており、デフォルトの状態では、ディスクユーティリティで「Macintosh HD」がグレーで表示され、その下に「com.apple.update-XXXX」が表示されます。ディスクユーティリティの操作方法および本書で解説しているdiskutilコマンドの使用方法は共通です。インストールの状況によりdisk1～等の番号が変わりますので、お使いの環境に合わせて読み替えてください。|
-|5.2(p.86)|_bashを使っている環境では、「.bash_history」のほかに「.bash_sessions」というディレクトリがある。_ 👉 zshでも同様に「.zsh_sessions」ディレクトリが作成されるようになりました。|
-|10.2(p.257、259)|ネットワークユーティリティ（Network Utility.app）は廃止されました[<a href="images/networkutility.png">画像</a>]。本書で解説しているifconfigコマンドやnetworksetupコマンドは共通です。|
-|10.1(p.244)|[参考情報]M1 Macの場合、`uname -a`で表示されるハードウェア情報は`arm64`、`uname -p`で表示されるCPUアーキテクチャは`arm`になります。【`uname -a`例】`Darwin mbpro 20.5.0 Darwin Kernel Version 20.5.0: Sat May  8 05:10:31 PDT 2021; root:xnu-7195.121.3~9/RELEASE_ARM64_T8101 arm64`|
+| 4.2（p.65） | パーティションの作成方法が変更されており、デフォルトの状態では、ディスクユーティリティで「Macintosh HD」がグレーで表示され、その下に「com.apple.update-XXXX」が表示されます。ディスクユーティリティの操作方法および本書で解説しているdiskutilコマンドの使用方法は共通です。インストールの状況によりdisk1～等の番号が変わりますので、お使いの環境に合わせて読み替えてください。|
+|5.2（p.86）|_bashを使っている環境では、「.bash_history」のほかに「.bash_sessions」というディレクトリがある。_ 👉 zshでも同様に「.zsh_sessions」ディレクトリが作成されるようになりました。|
+|10.2（p.257、259）|ネットワークユーティリティ（Network Utility.app）は廃止されました[<a href="images/networkutility.png">画像</a>]。本書で解説しているifconfigコマンドやnetworksetupコマンドは共通です。|
+|10.1（p.244）|[参考情報]M1 Macの場合、`uname -a`で表示されるハードウェア情報は`arm64`、`uname -p`で表示されるCPUアーキテクチャは`arm`になります。【`uname -a`例】`Darwin mbpro 20.5.0 Darwin Kernel Version 20.5.0: Sat May  8 05:10:31 PDT 2021; root:xnu-7195.121.3~9/RELEASE_ARM64_T8101 arm64`|
 
 ## Homebrew 3.0 について
 
@@ -54,7 +54,7 @@ M1 Mac環境でインストールした場合、PATHの追加が必要です。
 ユーザ名や設定ファイル名は実行時の環境に合わせて表示されるので、
 ターミナル（Terminal.app)で実行している場合はマウスで範囲選択→コピー＆ペーストして実行するのが確実です。
 
-参考：PATHについて👉3.3章(p.45)、シェルの設定ファイル👉zsh：7.2章(p.169)、bash7.3章(p.178)
+参考：PATHについて👉3.3章（p.45）、シェルの設定ファイル👉zsh：7.2章（p.169）、bash7.3章（p.178）
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 ==> <strong>Installation successful!</strong>
@@ -72,13 +72,13 @@ M1 Mac環境でインストールした場合、PATHの追加が必要です。
 
 | ページ | 内容 |
 | ---- | ---- |
-|10.2(p.258)| 本文中の ipconfig は ifconfig の誤りです。|
+|10.2（p.258）| 本文中の ipconfig は ifconfig の誤りです。|
 
 ## 履歴
 
 - 2020.4 サポートページ公開
 - 2021.6.7 正誤表 (p.258）追加
-- 2021.6.7 「macOS Big Sur（11.4）およびApple M1チップ搭載Macについて」「Big SurおよびM1 Macに関する補足情報」追加
+- 2021.6.7 「macOS Big SurおよびApple M1チップ搭載Macについて」「Big SurおよびM1 Macに関する補足情報」追加
 - 2021.6.7 「Homebrew 3.0 について」追加
 
 ----
