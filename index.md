@@ -40,8 +40,8 @@ macOS Mojave（10.14）以前のバージョンにも収録されていますが
 
 M1 Mac環境でインストールした場合、PATHの追加が必要です。
 インストール時のメッセージに追加用のコマンドが表示されているので、`echo`の行を実行してください。
-すぐにbrewコマンドを使用したい場合は、その次の`eval`の行を実行してください。
-`eval`は、引数を連結してシェルで実行するというコマンドです（クイックリファレンス p.297）。
+すぐにbrewコマンドを使用したい場合は、その次の`eval`の行を実行してください。<br>
+参考：`eval`は、引数を連結してシェルで実行するというコマンドです（クイックリファレンス p.297）。
 
 ユーザ名や設定ファイル名は実行時の環境に合わせて表示されるので、
 ターミナル（Terminal.app)で実行している場合はマウスで範囲選択→コピー＆ペーストして実行するのが確実です。
@@ -50,7 +50,7 @@ M1 Mac環境でインストールした場合、PATHの追加が必要です。
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 ==> <strong>Installation successful!</strong>
-<span style="color:silver;">＜略＞</span>
+<span style="color:#a6a6a6;">＜略＞</span>
 ==> <strong>Next steps:</strong>
 - Add Homebrew to your PATH in /Users/ユーザ名/.zprofile:
     echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/ユーザ名/.zprofile
